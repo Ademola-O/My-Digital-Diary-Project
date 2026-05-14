@@ -1,0 +1,88 @@
+/* Reset */ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fff;
+    color: #333;
+}
+
+header {
+    background-color: #f8f8f8;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 200px 1fr 200px; /* 3-column layout */
+    gap: 20px;
+    padding: 20px;
+
+
+
+    padding: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.welcome-section h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 200px 1fr;
+}
+
+/* Styles for the entire navigation bar */
+nav {
+    background-color: #f8f8f8;
+    padding: 10px;
+}
+ 
+/* Targets the unordered list within the navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+/* Styles for the links within the navigation */
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    position: relative;
+    display: inline-block; 
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    left: 0;
+    bottom: -5px; /* Position the underline just below the text */
+    background: #333; /* Underline color */
+    transition: width 0.3s ease-in-out; /* Smooth transition for the underline effect */
+}
+
+nav a:hover::after {
+    width: 100%;
+    
+}
