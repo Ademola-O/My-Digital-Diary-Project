@@ -5,69 +5,160 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Digital Diary</title>
     <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
 </head>
 <body>
-<!-- Main container for the entire page -->
-    <div class="container">
 <!-- Header section with navigation and buttons -->
     <header class="nav">
 
-        <h1>My Digital Diary</h1>
-        <nav>
+
+        <div class="logo">
+            <h1>My Digital Diary</h1>
+        </div>
+    
+        <nav class="navbar">
             <ul>
-                <li><a href="index.html">Journal</a></li>
-                <li><a href="vault.html">Vault</a></li>
-                <li><a href="collections.html">Collection</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a class="nav-link" href="index.html">Journal</a></li>
+                <li><a class="nav-link" href="vault.html">Vault</a></li>
+                <li><a class="nav-link" href="collections.html">Collection</a></li>
+                <li><a class="nav-link" href="about.html">About</a></li>
             </ul>
         </nav>
 
-        <button class="newEntry-btn">Sign Up</button>
-        <button class="login-btn">Login</button>
+        <div class="right-nav">
+        <button class="new-entry-btn">New Entry</button>
+        <div class="login-btn">⌾</div>
+        </div>
     </header>
 
-    <div class="main-content"> 
-    <section class="welcome-section">
-        <h2>Daily Ruminations</h2>
-        <p>Your very own personal safe haven to immortalize your thoughts, memories, and moments.
-            Whether you want to jot down your daily musings, document your life's journey, or simply have a space to reflect, My Digital Diary is here to provide you with a safe platform to express yourself freely. 
-        </p>
-    </section>
+<!-- Main container for the entire page -->
 
-    
-        <section class="subcontainer">
-            <div class="entry-grid">
-                <div class="entry">
-                    <h3>Entry Title 1</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <main>
+
+        <section class="hero">
+            <h2>Daily Ruminations</h2>
+            <p>
+                Whether you want to jot down your daily musings, document your life's journey, or simply have a space to reflect, My Digital Diary 
+                is here to provide you with a safe platform to express yourself freely. 
+            </p>
+        </section>
+
+<!-- Entry grid for displaying diary entries -->
+        <!-- Top entry grid -->
+        <section class="top-entries">
+        <!-- Large entry card -->
+            <div class="entry">
+                <div class="date">
+                   March 15, 2026
                 </div>
-                <div class="entry">
-                    <h3>Entry Title 2</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                <h3>
+                   The silence of the early morning is where the best ideas are born.
+                </h3>
+
+                <p>
+                   Today, I woke up before dawn and found myself in a quiet world. The stillness of the morning allowed my thoughts 
+                   to flow freely, and I was able to capture some of my best ideas for future projects. It's amazing how the absence
+                    of noise can lead to such clarity.
+                </p>
+            </div>
+        <!-- Small entry card -->
+            <div class="small-entry">
+
+                <div class="date">
+                    March 14, 2026
                 </div>
-                <div class="entry">
-                    <h3>Entry Title 3</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                <h3>
+                    A walk in the park can clear the mind and inspire creativity.
+                </h3>   
+
+                <p>
+                    I took a stroll through the park today, and it was refreshing. The greenery and fresh air helped me clear my mind, 
+                    and I found myself coming up with new ideas for my work. Sometimes, all it takes is a change of scenery to spark creativity.
+                </p>
+
+                <div class="tags">
+                    <span class="tag">Nature</span>
+                    <span class="tag">Creativity</span>
                 </div>
-                 <div class="entry">
-                    <h3>Entry Title 4</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+            </div>
+
+        </section>
+
+<!-- Bottom entries -->
+        <section class="bottom-entries">
+        <!-- Small entry card -->
+            <div class="small-entry">
+
+                <div class="date">
+                    January 13, 2026
                 </div>
-                 <div class="entry">
-                    <h3>Entry Title 5</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                    <h3>The rain in the city.</h3>
+
+                    <p>The way the neon lights reflect on the wet pavement
+                       tonight is mesmerizing.
+                    </p>
+                <div class="tags">
+                    <span class="tag">City</span>
+                    <span class="tag">Rain</span>
                 </div>
+            </div>
+         
+        <!-- Large entry card -->
+            <div class="entry">
+                <div class="date">
+                    December 2, 2026
+                </div>
+
+                <h3>
+                    The beauty of a sunset over the ocean is a reminder of life's fleeting moments.
+                </h3>
+
+                <p>
+                    I watched the sunset over the ocean today, and it was breathtaking. 
+                    The vibrant colors and the sound of the waves reminded me of how precious life is 
+                    and how important it is to cherish every moment. 
+                </p>     
+
             </div>
         </section>
 
+<!-- Call to action box -->
+
         <section class="cta-box">
+            <div class="icon-box">
+                ✎
+            </div>
             <h3>Feeling Inspired?</h3>
             <p>Your diary is waiting for your thoughts.</p>
-            <button class="newEntry-btn">Start writing now</button>
+            <a href="#">Start Writing Now</a>
+
         </section>
     </div> 
 
-    </div> 
+    </main> 
+
+    <footer>
+
+    <p>
+      © 2026 My ITOL Vault. Designed for reflection.
+    </p>
+
+    <div class="footer-links">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Archive</a>
+    </div>
+
+  </footer>
        
 </body> 
 </html>
