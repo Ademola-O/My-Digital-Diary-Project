@@ -1,0 +1,676 @@
+/* Reset */ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+} 
+
+/* Global Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f5f5f5;
+    color: #111;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Styles for links */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Styles for the header section */
+header {
+    width: 100%;
+    background-color: #f8f8f8;
+    padding: 24px 40px;
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space out the content */
+    align-items: center; /* Vertically center the items */
+}
+
+/* Styles for the main heading */
+h1 {
+    font-weight: 800;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Styles for the entire navigation bar */
+nav {
+
+    background-color: #f8f8f8;
+    padding: 10px;
+    
+}
+ 
+/* Targets the unordered list within the navigation */
+nav ul {
+    list-style: none;
+    gap: 40px;
+    display: flex;
+}
+/* Styles for the links within the navigation */
+nav a,
+.new-entry-btn2 {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    position: relative;
+    display: inline-block; 
+}
+
+/* Styles for the underline effect on navigation links */
+nav a::after,
+.new-entry-btn2::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    left: 0;
+    bottom: -5px; /* Position the underline just below the text */
+    background: #333; /* Underline color */
+    transition: width 0.3s ease-in-out; /* Smooth transition for the underline effect */
+}
+
+/* Styles for the hover effect on navigation links */
+nav a:hover::after,
+.new-entry-btn2:hover::after {
+    width: 100%; /* Expand the underline to full width on hover */  
+}
+
+.right-nav {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.new-entry-btn2{
+    border: none;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.new-entry-btn {
+    background-color: #111;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.new-entry-btn:hover {
+    background-color: #333;
+}
+
+.login-btn {
+      width: 25px;
+      height:25px;
+      border-radius:50%;
+      border:2px solid #111;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      font-size:14px;
+      font-weight:1000;
+    }
+
+/* Styles for the main content area */
+
+main {
+    width: 100%; /* Adjust this value as needed */
+    max-width: 1300px; /* Set a maximum width for larger screens */
+    margin: 40px auto;
+    display: grid;
+    padding: 0 20px;
+    flex: 1; /* Allow the main content to grow and fill available space */
+}
+
+/* Hero section styles */
+
+.hero {
+    margin-bottom: 55px;
+}
+
+.hero h2{
+    font-size: 72px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    max-width: 650px; /* Limit the width of the paragraph for better readability */
+    font-size: 18px;
+    color: #777;
+    line-height: 1.8;
+}
+
+/* Styles for the entries on the Vault page */
+.entries{
+      display:flex;
+      flex-direction:column;
+      gap:28px;
+    }
+
+/* Styles for the top and bottom entries sections */
+
+.top-entries {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 24px;
+    margin-bottom: 22px;
+}
+
+.bottom-entries {
+    display:grid;
+    grid-template-columns:1fr 2fr;
+    gap:22px;
+    margin-bottom:32px;
+}
+
+/* Styles for the small entry cards */
+.small-entry {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    transition: 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Styles for what happens on hover */  
+.small-entry:hover {
+    transform: translateY(-5px) ;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* Styles for the big entry cards */ 
+.entry, 
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    transition: 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.entry:hover,
+.card:hover {
+     transform: translateY(-5px) ;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* Styles for the date */ 
+.date {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #999;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+/* Styles for the date on the vault page */ 
+
+.vdate{
+    font-size:13px;
+    letter-spacing:2px;
+    color:#999;
+    font-weight:700;
+    text-transform:uppercase;
+}
+
+/* The little dots on the corner of each card on the vaukt page */
+.dots{
+    font-size:15px;
+    color:#999;
+}
+
+/* Targetting the writing in the large entry card */ 
+.entry h3 {
+    font-size: 27px;
+    line-height: 1.9;
+    color: black;
+}
+
+/* Targetting the writing in the large entry card */ 
+.entry p {
+    font-size: 17px;
+    line-height: 1.9;
+    color: #666;
+}
+
+.small-entry h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.small-entry p {
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* Styling Tags */ 
+.tags {
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background: #f2f2f2;
+    padding: 6px 10px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #666;
+}
+
+
+
+/* Styles for vault page */ 
+.meta{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    flex-wrap:wrap;
+
+}
+/* Styls for items at the top of the cards on vault page */ 
+.card-top{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      margin-bottom:20px;
+    }
+
+/* Styling for icon */ 
+.icon-box{
+    width:50px;
+    height:50px;
+    background:#f0f0f0;
+    border-radius:14px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:0 auto 24px;
+    font-size:22px;
+}
+
+/* Empty box to write ypour thoughts */
+
+.cta-box {
+    border: 2px dashed #e2e2e2;
+    border-radius: 10px;
+    padding: 70px 30px;
+    background: #fafafa;
+    text-align: center;
+}
+
+.cta-box h3 {
+    font-size: 32px;
+    margin-bottom: 14px;
+}
+
+.cta-box p {
+    color:#888;
+    margin-bottom:28px;
+    font-size:16px;
+}
+
+.cta-box a {
+    font-weight:700;
+    border-bottom:2px solid #111;
+    padding-bottom:3px;
+    transition:0.3s;
+}
+
+.cta-box a:hover {
+    opacity: 0.6;
+}
+
+footer{
+    padding:35px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    color:#999;
+    font-size:14px;
+}
+
+.footer-links{
+    display:flex;
+    gap:28px;
+}
+
+.footer-links a{
+    transition:0.3s;
+}
+
+.footer-links a:hover{
+    color:#111;
+}
+
+/* CSS to make the webpage responsive */ 
+@media(max-width:900px){
+
+.hero h1 {
+    font-size: 54px;
+}
+
+.top-entries,
+.bottom-entries{
+    grid-template-columns:1fr;
+}
+
+.editor-layout{
+    grid-template-columns: 1fr;
+}
+
+.nEntry{
+    padding: 20px;
+}
+
+.sidebar{
+    padding-top: 0;
+}
+
+.right-panel{
+    display: none;
+}
+}
+
+@media(max-width:600px){
+
+    header{
+        padding:20px;
+    }
+
+    footer{
+        flex-direction:column;
+        gap:15px;
+        text-align:center;
+    }
+
+    .hero h1{
+        font-size:42px;
+    }
+
+    .hero p{
+        font-size: 16px;
+    }
+ 
+    .entry{
+        padding: 26px;
+    }
+
+    .entry h3{
+        font-size: 22px;
+    }
+
+    .entry p{
+        font-size: 15px;
+    }
+
+    .cta-box h3{
+        font-size: 26px;
+    }
+
+    .title-line{
+        gap: 18px;
+    }
+
+    .vertical-line{
+        height: 110px;
+    }
+
+    .title-input{
+        font-size: 46px;
+    }
+
+    .editor textarea{
+        font-size: 20px;
+    }
+
+    .bottom-bar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}
+
+
+/* ------------------------------------------------------ //
+CSS For new entry page 
+------------------------------------------------------------*/
+
+button{
+    font-family: 'Inter', sans-serif;
+}
+
+/* Header */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.nEntry{
+    flex:1;
+    width:100%;
+    max-width:1200px;
+    margin:0 auto;
+    padding:30px 40px 60px;
+}
+
+.editor-layout{
+    display:grid;
+    grid-template-columns:140px 1fr 260px;
+    gap:40px;
+    min-height:700px;
+    }
+
+/* Left sidebar */ 
+.sidebar h4{
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #b0b0b0;
+    margin-bottom: 14px;
+}
+
+.sidebar p{
+    color: #b8b8b8;
+    font-size: 14px;
+    line-height: 1.9;
+    font-style: italic;
+}
+
+.editor{
+    display: flex;
+    flex-direction: column;
+}
+
+.title-area{
+    margin-bottom: 35px;
+}
+
+.title-line{
+    display: flex;
+    gap: 28px;
+    align-items: flex-start;
+}
+
+.vertical-line{
+    width: 3px;
+    height: 140;
+    background: #444;
+    border-radius: 10px;
+}
+
+.title-content{
+    flex: 1;
+}
+
+.title-input{
+    width: 100%;
+    border: none;
+    outline: none;
+    background:transparent;
+    font-size:72px;
+    font-weight:800;
+    color:#d6d6d6;
+    line-height:1.1;
+}
+
+ .title-input::placeholder{
+    color:#d6d6d6;
+    }
+
+
+/* Tag buttons */
+
+.tag-row{
+    display:flex;
+    gap:14px;
+    margin-bottom:60px;
+}
+
+.tag-btn{
+    border:none;
+    padding:12px 20px;
+    border-radius:14px;
+    background:white;
+    color:#555;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+    box-shadow:0 2px 8px rgba(0,0,0,0.03);
+}
+
+.tag-btn:hover{
+      transform:translateY(-2px);
+    }
+    
+.tag-btn.dark{
+      background:#c9c8c8;
+      color:rgb(94, 94, 94);
+    }
+
+/* Text Editor */
+.editor textarea{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 28px;
+    line-height: 1.8;
+    color: #444;
+    min-height: 400px;
+}
+
+.editor textarea::placeholder{
+      color:#d0d0d0;
+    }
+
+.right-panel{
+    background: #fafafa;
+    border-radius: 20px;
+    border: 1px solid #ececec;
+} 
+
+/* Bottom Actions */ 
+.bottom-bar{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.left-actions{
+    display: flex;
+    gap: 28px;
+    flex-wrap: wrap;
+}
+
+.action{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #666;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.action:hover{
+    color: #111;
+}
+
+
+.right-actions{
+    display:flex;
+    align-items:center;
+    gap:24px;
+}
+
+.discard-btn,
+.memory-btn,
+.private-btn {
+    color:#666;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+    background: none;
+    border: none;
+    font-size: 20px;
+}
+
+
+.save-btn{
+    background: #111;
+    color: white;
+    border: none;
+    padding: 18px 42px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Styles for hover animation */ 
+.save-btn:hover{
+    background: #333; 
+    transform: translateY(-2px); /* Lifts the button up 2px along the Y axix */ 
+}
+
+.discard-btn:hover,
+.memory-btn:hover,
+.private-btn:hover {
+    color: #111;
+    transform: translateY(-2px);
+}
+
+
