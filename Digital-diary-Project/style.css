@@ -290,7 +290,7 @@ main {
     flex-wrap:wrap;
 
 }
-/* Styls for items at the top of the cards on vault page */ 
+/* Styles for items at the top of the cards on vault page */ 
 .card-top{
       display:flex;
       justify-content:space-between;
@@ -477,32 +477,39 @@ button{
 .nEntry{
     flex:1;
     width:100%;
-    max-width:1200px;
     margin:0 auto;
-    padding:30px 40px 60px;
+    max-width: 1700px;
+    padding: 30px 40px 60px;
 }
 
 .editor-layout{
     display:grid;
-    grid-template-columns:140px 1fr 260px;
+    grid-template-columns:130px 1fr 260px;
     gap:40px;
     min-height:700px;
     }
 
 /* Left sidebar */ 
+.sidebar{
+    padding-top: 260px;
+    width: 50px;
+}
+
 .sidebar h4{
-    font-size: 11px;
+    font-size: 10px;
     letter-spacing: 2px;
     text-transform: uppercase;
     color: #b0b0b0;
     margin-bottom: 14px;
+    text-align: right;
 }
 
 .sidebar p{
     color: #b8b8b8;
-    font-size: 14px;
+    font-size: 10px;
     line-height: 1.9;
     font-style: italic;
+    text-align: right;
 }
 
 .editor{
@@ -511,18 +518,18 @@ button{
 }
 
 .title-area{
-    margin-bottom: 35px;
+    margin-bottom: 30px;
 }
 
 .title-line{
     display: flex;
-    gap: 28px;
+    gap: 25px;
     align-items: flex-start;
 }
 
 .vertical-line{
     width: 3px;
-    height: 140;
+    height: 140px;
     background: #444;
     border-radius: 10px;
 }
@@ -538,7 +545,7 @@ button{
     background:transparent;
     font-size:72px;
     font-weight:800;
-    color:#d6d6d6;
+    color:#939191;
     line-height:1.1;
 }
 
@@ -598,6 +605,11 @@ button{
     border: 1px solid #ececec;
 } 
 
+.right-panel h4 {
+
+    text-align: center;
+}
+
 /* Bottom Actions */ 
 .bottom-bar{
     margin-top: 40px;
@@ -647,6 +659,12 @@ button{
     font-size: 20px;
 }
 
+.discard-btn:hover,
+.memory-btn:hover,
+.private-btn:hover {
+    color: #111;
+    transform: translateY(-2px);
+}
 
 .save-btn{
     background: #111;
@@ -666,11 +684,23 @@ button{
     transform: translateY(-2px); /* Lifts the button up 2px along the Y axix */ 
 }
 
-.discard-btn:hover,
-.memory-btn:hover,
-.private-btn:hover {
-    color: #111;
-    transform: translateY(-2px);
+
+/* Empty state message shown in vault when no entries exist yet */
+.empty-state {
+    text-align: center;
+    padding: 80px 20px;
+    color: #aaa;
+    font-size: 18px;
 }
 
+.empty-state a {
+    color: #111;
+    font-weight: 700;
+    border-bottom: 2px solid #111;
+    padding-bottom: 2px;
+    transition: 0.3s;
+}
 
+.empty-state a:hover {
+    opacity: 0.5;
+}

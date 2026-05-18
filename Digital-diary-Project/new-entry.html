@@ -11,11 +11,12 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
+   
 
 </head>
 <body>
 <!-- Header section with navigation and buttons -->
-<header class="nav">
+<header class="new-nav">
 
 
         <div class="logo">
@@ -36,33 +37,17 @@
     </header>
 
 <!-- 
- <header>
-
-    <nav class="navbar">
-
-      <div class="logo">
-        My Digital Diary
-      </div>
-
-      <div class="right-nav">
-
-        <a href="#" class="nav-link">
-          Archive
-        </a>
-
-        <a href="#" class="nav-link">
-          New Entry
-        </a>
-
-        <div class="profile-icon">
-          ⌾
-        </div>
-
-      </div>
-
-    </nav>
-
-  </header>
+    <header>
+        
+        <nav class="navbar">
+            <div class="logo">My Digital Diary</div>
+            <div class="right-nav">
+                <a href="#" class="nav-link"> Archive </a>
+                <a href="#" class="nav-link"> New Entry </a>
+                <div class="profile-icon"> ⌾ </div>
+            </div>
+        </nav>
+    </header>
 --> 
 
 
@@ -83,91 +68,73 @@
 
         <section class="editor">
 
-        <!-- Title Area -->
+        <!-- Title area -->
 
-        <div class="title-area">
+            <div class="title-area">
+                <div class="title-line"> 
+                    <div class="vertical-line"></div>
 
-          <div class="title-line">
+                        <div class="title-content">
+                            <div class="date">Wednesday, May 22 2024</div>
+                            <input type="text" id="titleInput" class="title-input" placeholder="Untitled Reflection">                           
+                        </div>
+                    </div>
+                </div>
 
-            <div class="vertical-line"></div>
-
-            <div class="title-content">
-
-              <div class="date">
-                Wednesday, May 22 2024
-              </div>
-
-              <input 
-                type="text"
-                class="title-input"
-                placeholder="Untitled Reflection"
-              >
-
-            </div>
-
-          </div>
-
-        </div>
-
-        <!-- Tags -->
-
-        <div class="tag-row">
-
-          <button class="tag-btn dark">
-            ⊕ Thoughtful
-          </button>
-
-          <button class="tag-btn">
-            ＋ Add Tag
-          </button>
-
-        </div>
-
-        <!-- Text Editor -->
-
-        <textarea placeholder="Begin your reflection..."></textarea>
-
-        <!-- Bottom Controls -->
-
-        <div class="bottom-bar">
-
-            <div class="left-actions">
-                <button class="memory-btn"> 🖼 Insert Memory</button>
-                <button class="private-btn">🔒 Private</button>
-            </div>
+            <!-- Tags -->
             
-            <div class="right-actions">
-                <button class="discard-btn">Discard</button>
-                <button class="save-btn">Save Entry</button>
+            <div class="tag-row">
+                <button class="tag-btn dark"> ⊕ Thoughtful </button>
+
+                <button class="tag-btn"> ＋ Add Tag </button>
             </div>
 
-        </div>
+            <textarea id="content" placeholder="Begin your reflection..."></textarea>
 
-      </section>
+            <div class="bottom-bar">
+
+                <div class="left-actions">
+                   <button onclick="addImage()" class="memory-btn"> 🖼 Insert Memory</button>
+                    <button onclick="private()" class="private-btn">🔒 Private</button>
+                </div>
+                <div class="right-actions">
+                    <button onclick="discard()" class="discard-btn">Discard</button>
+                    <button onclick="saveEntry()" class="save-btn">Save Entry</button>
+                </div>
+            </div>
+
+
+    
+
+        </section>
 
       <!-- Right Empty Panel -->
 
-      <aside class="right-panel"></aside>
+      <aside class="right-panel">
+        <h4>Saved Entries</h4>
+        <div id="entriesContainer"></div>
+      </aside>
 
     </div>
 
-  </main>
-
+</main>
 
 
 <!-- Footer -->
 
-    <footer>
-
+<footer>
+    
     <p>© 2026 The Digital Vellum. Designed for reflection.</p>
-
+    
     <div class="footer-links">
-      <a href="#">Privacy</a>
-      <a href="#">Terms</a>
-      <a href="#">Archive</a>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Archive</a>
     </div>
 
-  </footer>
+</footer>
+
+ <script src="saveEntry.js"></script>
 
 </body> 
 </html>
