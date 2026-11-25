@@ -688,9 +688,14 @@ button{
 /* Empty state message shown in vault when no entries exist yet */
 .empty-state {
     text-align: center;
-    padding: 80px 20px;
-    color: #aaa;
+    padding: 50px 20px;
+    color: #888;
     font-size: 18px;
+    background: #fafafa;
+    border: 2px dashed #d0d0d0;
+    border-radius: 10px;
+    margin-bottom: 28px;     /* space before the demo cards underneath */
+    grid-column: 1 / -1;     /* on the home page, stretch across the full grid */
 }
 
 .empty-state a {
